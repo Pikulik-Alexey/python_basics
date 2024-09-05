@@ -10,7 +10,7 @@ for j in range(3):
     t.fd(350)
     t.circle(radius, 270)
     t.fd(150)
-    t.color((50 + j * 10) / 255, (193 - j * 25) / 255, (143 - j * 15) / 255)
+    t.color((200 + j * 10) / 255, (75 - j * 25) / 255, (45 - j * 15) / 255)
     t.pu()
     t.left(90)
     t.forward(10)
