@@ -10,7 +10,7 @@
 # seats = [i for i in a]
 # print(seats)
 
-seats = [(f'Б{i}', 'свободно') for i in range(1, 10)]
+seats = [[f'Б{i}', 'свободно'] for i in range(1, 10)]
 # print(seats)
 
 
@@ -18,11 +18,11 @@ def book_seat(seats):
     try:
         seat_name = input(
             'Введите место для бронирования билета(Б1-Б9) - ').upper()
-        i = seats.index((seat_name, 'свободно'))
-        seats[i] = (seat_name, 'забронировано')
+        i = seats.index([seat_name, 'свободно'])
+        seats[i][1] = 'забронировано'
         print(f'Место {seat_name} успешно забронировано')
     except ValueError:
-        print(f'Место {seat_name} успешно уже забронировано')
+        print(f'Место {seat_name} уже забронировано или не существует')
     except Exception as e:
         print(f'Произошла неожиданная ошибка {e}')
 
